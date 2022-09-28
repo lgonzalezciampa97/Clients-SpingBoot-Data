@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Condensed:wght@300&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+
+*{
+    font-family: sans-serif;
+}
+
+.client-img{
+    display: flex;
+    justify-content: left;
+    size: 400px 400px;
+}
+
+.client-container{
+    display: flex;
+    margin: 20px auto;
+    flex-direction: row;
+}
+
+h1{
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Roboto Flex', sans-serif;
+    text-shadow: 1px 2px 2px black;
+    color: #0bcf3c;
+}
+
+.table-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    background-color: #ddd;
+    margin-top: 30px;
+    width: auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    background-color: #ddd;
+    margin-top: 40px;
+    width: 400px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.form-field input{
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    outline: none !important;
+    border: none;
+    border-bottom: 1px solid #6a9191;
+}
+
+.errors{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Roboto Flex', sans-serif;
+    color: rgb(165, 39, 39);
+}
+
+.principal-action-btn-container{
+    display: flex;
+}
+
+.principal-actions{
+    display: flex;
+    flex-direction: row;
+}
+
+.clients-btn-create{
+    display: flex;
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    background-color: #0bcf3c;
+    width: fit-content;
+    font-size: 24px;
+    font-family: sans-serif;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    outline: none !important;
+}
+
+.clients-btn-create:hover{
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.clients-btn-delete{
+    display: flex;
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    background-color: #DC3545;
+    width: fit-content;
+    font-size: 24px;
+    font-family: sans-serif;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    outline: none !important;
+}
+
+.clients-btn-delete:hover{
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.clients-table{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+}
+  
+.clients-table td, .clients-table th {
+    border: 2px solid #ddd;
+    padding: 12px;
+  }
+  
+.clients-table tr:nth-child(even){background-color: #f2f2f2;}
+  
+/* .clients-table tr:hover {background-color: #ddd;} */
+  
+.clients-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0bcf3c;
+    color: white;
+}
+
+.success{
+    display: flex;
+    color: rgb(11, 65, 15);
+    background-color: rgb(38, 209, 112);
+    font-size: 24px;
+    font-family: 'Roboto Flex', sans-serif;
+    padding: 6px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.danger{
+    display: flex;
+    color: rgb(65, 11, 11);
+    background-color: rgb(214, 116, 116);
+    font-size: 24px;
+    font-family: 'Roboto Flex', sans-serif;
+    padding: 6px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.warning{
+    display: flex;
+    color: rgb(65, 64, 11);
+    background-color: rgb(208, 218, 73);
+    font-size: 24px;
+    font-family: 'Roboto Flex', sans-serif;
+    padding: 6px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.info{
+    display: flex;
+    color: rgb(12, 11, 65);
+    background-color: rgb(128, 197, 238);
+    font-size: 24px;
+    font-family: 'Roboto Flex', sans-serif;
+    padding: 6px;
+    padding-left: 20px;
+    margin: auto;
+}
