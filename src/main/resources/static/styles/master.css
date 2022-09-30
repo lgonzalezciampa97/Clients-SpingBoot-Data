@@ -6,9 +6,9 @@
 }
 
 .client-img{
-    display: flex;
     justify-content: left;
     size: 400px 400px;
+    margin-left: 40px;
 }
 
 .clients-container{
@@ -81,6 +81,7 @@ h1{
 
 .principal-action-btn-container{
     display: flex;
+    justify-content: space-around;
 }
 
 .principal-actions{
@@ -104,6 +105,12 @@ h1{
     outline: none !important;
 }
 
+.clients-btn-create a{
+    text-decoration: none;
+    color: white;
+}
+
+
 .clients-btn-create:hover{
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -123,6 +130,11 @@ h1{
     border-radius: 5px;
     transition: 0.3s;
     outline: none !important;
+}
+
+.clients-btn-delete a{
+    text-decoration: none;
+    color: white;
 }
 
 .clients-btn-delete:hover{
@@ -155,6 +167,13 @@ h1{
     text-align: left;
     background-color: #0bcf3c;
     color: white;
+}
+
+.footer-container{
+    bottom: 0;
+    margin-bottom: 0;
+    background-color: #212529;
+    height: 180px;
 }
 
 .success{

@@ -10,18 +10,21 @@
     </div> -->
 
     <div class="principal-actions">
-      <div class="client-img"><img src="/imgs/client1.jpg" /></div>
-      <div class="client-container">
+      <div th:replace="layout/layout :: img"></div>
+      <div class="clients-container">
         <!-- <h1 th:text="${title}"></h1> -->
-        <div class="table-container">
+        <div class="table-container" th:if="${isAnyClient == true}">
           <div class="principal-action-btn-container">
-            <a class="clients-btn-create" th:href="@{/form}">Create Client</a>
-            <a
-              class="clients-btn-delete"
-              th:href="@{/deleteall}"
-              onclick="return confirm('¿Are you shure?')"
-              >Delete All</a
-            >
+            <div class="clients-btn-create">
+              <a th:href=" @{/form}">Create Client</a>
+            </div>
+            <div th:if="${isAnyClient == true}" class="clients-btn-delete">
+              <a
+                th:href="@{/deleteall}"
+                onclick="return confirm('¿Are you shure?')"
+                >Delete All</a
+              >
+            </div>
           </div>
           <div th:if="${isAnyClient == true}" class="table">
             <table class="clients-table">

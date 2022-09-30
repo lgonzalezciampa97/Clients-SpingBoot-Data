@@ -14,45 +14,57 @@
     />
   </head>
   <body>
-
-  <header th:fragment="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Spring Boot Clients List</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" th:href="@{/list}">Clients</a>
-            </li>
-          </ul>
+    <header th:fragment="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="margin-right: 20%;" th:href="@{/list}">Clients List</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/list}">Clients</a>
+              </li>
+              <li>
+                <a
+                  th:if="${isAnyClient == false}"
+                  class="nav-link"
+                  style="color: #0BCF3C;"
+                  th:href="@{/form}"
+                  >Create Client</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="success" th:if="${success != null}" th:text="${success}"></div>
-    <div class="danger" th:if="${error != null}" th:text="${error}"></div>
-    <div class="warning" th:if="${warning != null}" th:text="${warning}"></div>
-    <div class="info" th:if="${info != null}" th:text="${info}"></div>
-  </header>
+      <div
+        class="success"
+        th:if="${success != null}"
+        th:text="${success}"
+      ></div>
+      <div class="danger" th:if="${error != null}" th:text="${error}"></div>
+      <div
+        class="warning"
+        th:if="${warning != null}"
+        th:text="${warning}"
+      ></div>
+      <div class="info" th:if="${info != null}" th:text="${info}"></div>
+    </header>
 
-  <div class="container"></div>
+    <div class="client-img" th:fragment="img"><img src="../imgs/client1.jpg" /></div>
 
-  <footer th:fragment="footer" class="container">
-    
-  </footer>
-
-    
+    <footer th:fragment="footer" class="footer-container"></footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
