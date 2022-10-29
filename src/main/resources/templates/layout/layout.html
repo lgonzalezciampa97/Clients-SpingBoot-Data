@@ -3,7 +3,7 @@
   <head th:fragment="head">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title th:text="${title}"></title>
     <link rel="stylesheet" th:href="@{/styles/master.css}" />
     <link
@@ -17,7 +17,7 @@
     <header th:fragment="header">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" style="margin-right: 20%;" th:href="@{/list}">Clients List</a>
+          <a class="navbar-brand" style="margin-right: 30%;" th:href="@{/list}">Clients List</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -52,6 +52,7 @@
         class="success"
         th:if="${success != null}"
         th:text="${success}"
+        id="success"
       ></div>
       <div class="danger" th:if="${error != null}" th:text="${error}"></div>
       <div
@@ -62,10 +63,29 @@
       <div class="info" th:if="${info != null}" th:text="${info}"></div>
     </header>
 
-    <div class="client-img" th:fragment="img"><img src="../imgs/client1.jpg" /></div>
+    <!-- <div class="img-container" th:fragment="img"><img class="client-img" src="../imgs/clients.png" /></div> -->
 
-    <footer th:fragment="footer" class="footer-container"></footer>
+    <footer class="footer-container" th:fragment="footer">
+      <div>
+        <ul style="list-style: none;">
+          <li>  </li>
+          <li> </li>
+        </ul>
+      </div>
+    </footer>
 
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-muted" href="https://github.com/lgonzalezciampa97">Github</a></li>
+          <li class="nav-item"><a class="nav-link px-2 text-muted" href="https://www.linkedin.com/in/leonardo-gonzalez-ciampa/">Linkedin</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2021 Leonardo Gonzalez (Java Developer)</p>
+      </footer>
+    </div>
+
+    <script th:src="@{/javascript/main.js}"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

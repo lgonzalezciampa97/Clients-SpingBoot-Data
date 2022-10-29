@@ -71,7 +71,7 @@ public class ClientController {
 
 		boolean isAnyClient = clientService.isAnyClient();
 		
-		Pageable pageRequest = PageRequest.of(page, 4);
+		Pageable pageRequest = PageRequest.of(page, 3);
 
 		Page<Client> clients = clientService.findAll(pageRequest);
 

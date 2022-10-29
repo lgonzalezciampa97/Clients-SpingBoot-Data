@@ -5,15 +5,25 @@
     font-family: sans-serif;
 }
 
+body{
+    background-color: #6a9191;
+}
+
+.img-container{
+    margin-top: 20px;
+}
+
 .client-img{
     justify-content: left;
-    size: 400px 400px;
+    height: 300px;
+    width:  400px;
     margin-left: 40px;
 }
 
 .clients-container{
     display: flex;
-    margin: 20px auto;
+    margin-top: 0px;
+    margin: 0px auto;
     flex-direction: row;
 }
 
@@ -31,7 +41,7 @@ h1{
     padding: 20px;
     margin: auto;
     background-color: #ddd;
-    margin-top: 30px;
+    margin-top: 70px;
     width: auto;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -167,13 +177,6 @@ h1{
     text-align: left;
     background-color: #0bcf3c;
     color: white;
-}
-
-.footer-container{
-    bottom: 0;
-    margin-bottom: 0;
-    background-color: #212529;
-    height: 180px;
 }
 
 .success{
